@@ -1,6 +1,6 @@
 const nollyEl = document.getElementById("nolly-list");
 
-function handlelike(event) {
+function handleLike(event) {
   if (event.target.classList.contains("btn")) {
     const nollyItem = event.target.closest("li");
     const priceElement = nollyItem.querySelector(".nolly-price");
@@ -10,6 +10,8 @@ function handlelike(event) {
     //increment in place
     likeButton++;
     priceTag += 5;
+
+    //updating nollyItem
     countElement.textContent = likeButton;
     priceElement.textContent = `$${priceTag}`;
     nollyItem.setAttribute("flix-likes", likeButton);
@@ -29,4 +31,4 @@ function flixSort() {
   movies.forEach((movie) => nollyEl.appendChild(movie));
 }
 
-nollyEl.addEventListener("click", handlelike);
+nollyEl.addEventListener("click", handleLike);
