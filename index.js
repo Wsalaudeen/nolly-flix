@@ -7,15 +7,19 @@ function handleLike(event) {
     const countElement = nollyItem.querySelector(".count");
     let priceTag = parseInt(nollyItem.getAttribute("flix-price"));
     let likeButton = parseInt(countElement.textContent);
-    //increment in place
+    //modify in place
+    // increment like count and price
     likeButton++;
     priceTag += 5;
 
-    //updating nollyItem
+    //update nollyItem
+    //update the dom and attributes
     countElement.textContent = likeButton;
     priceElement.textContent = `$${priceTag}`;
     nollyItem.setAttribute("flix-likes", likeButton);
     nollyItem.setAttribute("flix-price", priceTag);
+
+    //sort the list items
     flixSort();
   }
 }
