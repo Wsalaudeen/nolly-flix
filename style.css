@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Quicksand:wght@500;700&display=swap");
+
+/* css reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+/* css variables */
+:root {
+  --body-color: #5a3e2b;
+  --header-bg: #f4a226;
+  --list-bg: #ffebb3;
+  --count-color: #76c7ad;
+}
+
+body {
+  font-size: 2.4rem;
+  font-weight: 500;
+  font-family: sans-serif;
+  font-family: "Quicksand";
+  background-color: var(--body-color);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+h1 {
+  text-align: center;
+  background-color: var(--header-bg);
+  font-family: "Monoton";
+  font-size: 8rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  word-spacing: 30px;
+  letter-spacing: -5px;
+  padding: 2.4rem 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--list-bg);
+}
+li:last-child {
+  border-bottom: none;
+}
+
+.btn {
+  background-color: var(--list-bg);
+  color: var(--body-color);
+  font-family: inherit;
+  border-radius: 5px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 400;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: var(--header-bg);
+}
+.nolly-title {
+  flex-grow: 1;
+  margin-inline-start: 10px;
+}
+.count {
+  margin-inline-end: 20px;
+}
+.nolly-price,
+.count {
+  color: var(--count-color);
+  font-weight: bold;
+}
+
+.container {
+  padding: 15px;
+}
